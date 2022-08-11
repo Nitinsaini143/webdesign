@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgba(169, 169, 169, 0.616);
+            
+
+            
+
+        }
+        .main-div{
+            display: flex;
+            justify-content: center;
+            margin-top: 120px;
+            border: 3px solid rgba(123, 96, 155, 0.623);
+            width: 60%;
+            margin-left: 220px 
+                
+                
+           
+
+        }
+        .question{
+            font-size: 2em;
+            color: rgba(128, 128, 128, 0.692);
+        }
+        ul{
+            list-style-type: none;
+            margin-top: 40px;
+            
+        }
+        ul li{
+            line-height: 30px;
+            font-size: large;
+        }
+
+        .main-div button{
+        margin-left: 110px;
+        margin-top: 40px;
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: rgba(95, 158, 160, 0.589);
+        margin-bottom: 20px;
+        }
+        button:hover{
+            background-color: rgba(211, 211, 211, 0.76);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="inner-div">
+        <h2 class="question">Question comes here</h2>
+        <ul>
+            <li>
+                <input type="radio" name="answer" id="ans1" class="answer">
+                <label for="ans1" id="option1">Hello to my world</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans2" class="answer">
+                <label for="ans2" id="option2" >Hey text markup langauge</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans3" class="answer">
+                <label for="ans3" id="option3">Hyper  text markup langauge</label>
+            </li>
+            
+        </ul>
+      
+        <button id="submit">SUBMIT</button>
+        <div id="showScore" class="scoreArea">
+
+        </div>
+        </div>
+    </div>
+    <script>
+        const quizeDb=[
+            {
+                question1:'what is HTML',
+                option1:"any",
+                option2:'any',
+                option3:'hypertext markup language',
+                ans:3
+            },
+            {
+                question1:'what is  css',
+                option1:"any",
+                option2:2,
+                option3:'any',
+                ans:2
+            },
+        ]
+
+        let ques=document.querySelector('.question')
+        let option1=document.querySelector('#option1')
+        let option2=document.querySelector('#option2')
+        let option3=document.querySelector('#option')
+       
+
+        const loadQuestion=(quesNo=0)=>{
+           
+            ques.innerHTML=quizeDb[quesNo].question1;
+            option1.innerHTML=quizeDb[quesNo].option1;
+            option2.innerHTML=quizeDb[quesNo].option2;
+            option3.innerHTML=quizeDb[quesNo].option3;
+        }
+
+       
+
+
+        loadQuestion(0)
+        // console.log('option1',option1)
+
+        // option1.addEventListener('click',()=>{
+
+        //     loadQuestion(1)
+        // })
+
+
+
+
+    </script>
+    
+</body>
+</html>
